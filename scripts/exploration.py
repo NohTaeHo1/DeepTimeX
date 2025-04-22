@@ -1,12 +1,16 @@
 # In[0]
 import os
-# 작업 디렉토리를 프로젝트 루트로 고정
-os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
+
+# 프로젝트 루트로 이동 (scripts → ../)
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+os.chdir(project_root)
+
+# src 폴더를 import 경로에 추가
+sys.path.append(os.path.join(project_root, 'src'))
 
 from data_loader import load_ucr_dataset
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -20,7 +24,7 @@ def save_plot(fig, filename, folder='results/plots'):
 
 
 # 시각화 함수
-def plot_samples(X, y, title, dataset_name, n_per_class=3):
+def plot_samples(X, y, title, dataset_name, n_per_class=1):
     classes = np.unique(y)
     colors = ['blue', 'red', 'green', 'orange', 'purple', 'brown']  # 최대 6 클래스까지
 

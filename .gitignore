@@ -1,0 +1,53 @@
+data/raw/
+result/
+
+# Python 캐시 / 컴파일 파일
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# 가상환경 폴더
+venv/
+.venv/
+
+# Jupyter, Spyder 관련 캐시
+.ipynb_checkpoints/
+.spyproject/
+.history/
+
+# 운영체제 생성 파일
+.DS_Store
+Thumbs.db
+
+# 실험 데이터 및 결과
+data/raw/
+data/processed/
+results/
+experiments/
+
+# 모델 저장 파일
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+*.pt
+*.onnx
+
+# 로그, 설정 백업
+*.log
+*.bak
+*.tmp
+*.old
+
+# 환경 파일 (민감 정보 들어갈 수 있음)
+.env
+.env.*
+
+# VSCode 설정 (공유 원하지 않을 때)
+.vscode/
+
+# 기타 업로드 금지 대상 (입맛대로 추가 가능)
+*.csv
+*.tsv
