@@ -1,6 +1,6 @@
 from run.train import main as train_main
 from run.evaluate import evaluate_model
-from run.layer_visualization import run_visualization as layer_visualization
+# from run.layer_visualization import run_visualization as layer_visualization
 
 import argparse
 import os
@@ -24,18 +24,6 @@ def run_pipeline(datasets, models):
             except Exception as e:
                 print(f"평가 중 에러 발생: {e}")
                 continue
-
-            try:
-                if model == "resnet":
-                    cam_args = argparse.Namespace(
-                        dataset=dataset,
-                        model=model,
-                        sample_id=0
-                    )
-                    layer_visualization(cam_args)
-
-            except Exception as e:
-                print(f"CAM 시각화 중 에러 발생: {e}")
 
 
 if __name__ == "__main__":

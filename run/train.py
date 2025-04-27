@@ -70,7 +70,7 @@ def main(args):
     history = model.fit(
         X_train, y_train,
         validation_data=(X_test, y_test),
-        epochs=10,
+        epochs=500,
         batch_size=batch_size,
         verbose=1,
     )
